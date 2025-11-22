@@ -2,9 +2,9 @@
 import React, { useState, useEffect } from "react"
 import { observer } from "mobx-react-lite"
 import { View, Text, Image, FlatList, TouchableOpacity, ActivityIndicator } from "react-native"
-import { useStores } from "../models"
+import { useStores } from "../models/UseStores"
 import { NewsArticle, PoliticalBias } from "../models/NewsArticle"
-import { color } from "../theme"
+import { colors } from "../theme/colors"
 
 const FULL: ViewStyle = { flex: 1 }
 const CONTAINER: ViewStyle = {
@@ -12,12 +12,12 @@ const CONTAINER: ViewStyle = {
     paddingTop: 20,
 }
 const ARTICLE_CARD: ViewStyle = {
-    backgroundColor: color.palette.white,
+    backgroundColor: colors.background,
     borderRadius: 8,
     marginHorizontal: 15,
     marginVertical: 8,
     overflow: "hidden",
-    shadowColor: color.palette.black,
+    shadowColor: colors.transparent,
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
